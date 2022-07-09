@@ -1,0 +1,31 @@
+.box {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+.box div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: orange;
+    margin:0 5px;
+    animation-name: change;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.box div:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.box div:nth-child(3) {
+    animation-delay: 0.6s;
+}
+@keyframes change { 
+    to {
+        transform: translateY(-20px);
+        opacity: 0.5;
+    }
+
+}
